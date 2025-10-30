@@ -69,7 +69,7 @@ customElements.define('x-frame-bypass', class extends HTMLIFrameElement {
 		const proxies = (options || {}).proxies || [
 			'https://corseverywhere.niroulap69.workers.dev/'
 		]
-		return fetch(proxies[i] + encodeURIComponent(url), options).then(res => {
+		return fetch(proxies[i] + url, options).then(res => {
 			if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
 			return res
 		}).catch(error => {
