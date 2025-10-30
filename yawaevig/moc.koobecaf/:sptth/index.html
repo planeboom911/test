@@ -1,6 +1,10 @@
 <html>
+  <head>
+    <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+	  <script src="https://unpkg.com/x-frame-bypass" type="module"></script>
+  </head>
   <style>
-    * { margin: 0; padding: 0 }
+    * { margin: 0; padding: 0; overflow: hidden; }
     body, html { height: 100%; }
     iframe {
       width: 100%;
@@ -8,6 +12,6 @@
     }
   </style>
   <body>
-    <iframe src="https://facebook.com" crossorigin/>
+    <iframe is="x-frame-bypass" src="https://facebook.com"></iframe>
   </body>
 </html>
